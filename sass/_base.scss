@@ -14,6 +14,10 @@ $color-grey-dark-2: #6D5D4B;
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;  // 1200 px
+$bp-large: 62.5em; // 1000px
+
 
 // Reset
 *, 
@@ -27,6 +31,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -49,5 +57,10 @@ body {
         // sidebar, spacing (at least 6rem), then content: be at least able to show content, 14rem at max, spacing
         // Also allows for "bleeding" content where some elements only take up 8 content columns and others take up 8 content columns + spacing columns
     
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-rows: 6rem 80vh min-content 40vw min-content min-content min-content; // vh for header, vw for 'static' size to keep proportions, min-content to ensure content has just enough space
+        grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];     
+    }
 
 }

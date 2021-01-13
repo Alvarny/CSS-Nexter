@@ -1,5 +1,7 @@
 .story {
 
+
+
     &__pictures {
         background-color: $color-primary;
 
@@ -10,5 +12,26 @@
         background-color: $color-grey-light-1;
 
         grid-column: col-start 5 / full-end;
+
+        padding: 6rem 8vw;
+
+        /*
+        // Align items using flex
+        display: flex;
+        flex-direction: column;
+        justify-content: center; // Put it all in the middle
+        align-items: flex-start; // Have items start at the start (stop button from being huge)
+        */
+
+        // Align items using css grid
+        display: grid;
+        align-content: center;
+        justify-items: start;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-style: italic;
+        margin-bottom: 4rem;
     }
 }

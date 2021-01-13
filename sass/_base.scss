@@ -49,10 +49,5 @@ body {
         // sidebar, spacing (at least 6rem), then content: be at least able to show content, 14rem at max, spacing
         // Also allows for "bleeding" content where some elements only take up 8 content columns and others take up 8 content columns + spacing columns
     
-    // Layout testing purposes
-    & > * {
-        padding: 4rem;
-        font-size: 3rem;
-    }
 
 }
